@@ -1,22 +1,36 @@
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
+import NavList from "./NavList";
 
 export default function Navbar() {
-  const [toggleMenu, editToggleMenu] = useState(false);
+  const [ toggleMenu, editToggleMenu ] = useState(false);
   console.log(toggleMenu);
-  
+
   return (
-    <div class="bg-red-700 px-[10vw] py-4 flex items-center justify-between">
-      <div className="text-green-500">
-        <span className="text-white">development_</span>SEED
-      </div>
-      <button
-        onClick={() => {
-          editToggleMenu(!toggleMenu);
-        }}
+    <div className="h-full w-full">
+      <div className=" px-[10vw] py-4 flex items-center justify-between shadow-lg">
+        <div className="text-green-500">
+          <span className="">development_</span>SEED
+        </div>
+        <button
+          className="block md:hidden"
+          onClick={() => {
+            editToggleMenu(!toggleMenu);
+          }}
         >
-        <BiMenu className="text-3xl" />
-      </button>
+          <BiMenu className="text-3xl" />
+        </button>
+        <div className="hidden md:block ">
+          <NavList />
+        </div>
+      </div>
+      <div
+        className={`flex flex-col gap-3 h-screen w-screen bg-white transition absolute   ${toggleMenu
+          ? "opacity-100 translate-x-0"
+          : "opacity-0 -translate-x-[100vw]"}`}
+      >
+        <NavList />
+      </div>
     </div>
   );
 }
