@@ -13,24 +13,25 @@ export default function Navbar() {
           <span className="">development_</span>SEED
         </div>
         <button
-          className="block md:hidden"
+          className="block lg:hidden"
           onClick={() => {
             editToggleMenu(!toggleMenu);
           }}
         >
           <BiMenu className="text-3xl" />
         </button>
-        <div className="hidden md:block ">
+        <div className="hidden lg:block ">
           <NavList />
         </div>
       </div>
+      
       <div
-        className={`flex flex-col gap-3 h-screen w-screen bg-white transition absolute   ${toggleMenu
-          ? "opacity-100 translate-x-0"
-          : "opacity-0 -translate-x-[100vw]"}`}
+        className={`flex flex-col gap-3 h-screen w-screen bg-white transition absolute lg:hidden
+        ${toggleMenu ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-[100vw]"}`}
       >
         <NavList />
       </div>
+
     </div>
   );
 }
