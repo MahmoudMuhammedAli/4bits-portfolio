@@ -1,15 +1,20 @@
-import Head from "next/head";
-import Image from "next/image";
-
+import Section from './components/Section';
+import Sectionpart from './components/Sectionpart';
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <button className="btn btn-primary">Hello daisyUI</button>
+    <div>   
+            <Sectionpart hideComponent="hidden sm:flex flex-col m-auto mt-20 mb-20 hero-content text-center text-neutral-content"/>
+            {/*start  hero section */}
+            <div className="hero min-h-screen bg-[url('https://placeimg.com/1000/800/arch')]" >
+              <div className="hero-overlay bg-opacity-60"></div> 
+              <div className="hero-content text-center text-neutral-content">              
+                    <Sectionpart hideComponent="sm:hidden"/>
+              </div>
+            </div>
+            {/* End hero section */}
+            {/* start section  */}
+            <Section/>                
+            {/* End section  */}
     </div>
   );
 }
