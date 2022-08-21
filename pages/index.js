@@ -4,6 +4,7 @@ import Sectionpart from '../components/Sectionpart';
 export default function Home() {
   return (
     <>
+    <Navbar/>    
       <Sectionpart hideComponent="hidden sm:flex flex-col m-auto mt-20 mb-20 hero-content text-center text-neutral-content" />
       {/*start  hero section */}
       <div className="hero min-h-screen bg-[url('https://placeimg.com/1000/800/arch')]" >
@@ -12,11 +13,13 @@ export default function Home() {
           <Sectionpart hideComponent="sm:hidden" />
         </div>
       </div>
+        <Team />
       {/* End hero section */}
       {/* start section  */}
       <Section />
       <Footer/>
       {/* End section  */}
     </>
+
   );
 }
