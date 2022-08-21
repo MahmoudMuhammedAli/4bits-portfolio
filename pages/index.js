@@ -1,6 +1,8 @@
 import Footer from '../components/Footer';
 import Section from '../components/Section';
 import Sectionpart from '../components/Sectionpart';
+import Navbar from '../components/Navbar';
+import Team from '../components/Team';
 export default function Home() {
   return (
     <>
