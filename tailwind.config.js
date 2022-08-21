@@ -13,7 +13,7 @@ module.exports = {
       keyframes: {
         animateBox: {
           from: { transform: "translateX(0px)" },
-          to: { transform: "translateX(70vw)" },
+          to: { transform: "translateX(80vw)" },
         },
       },
     },

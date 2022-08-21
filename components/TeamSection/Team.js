@@ -3,6 +3,7 @@ import TeamCard from "./TeamCard";
 import Lottie from "lottie-react";
 import swipe from "../../assets/swipe.json";
 
+
 import Bebo from "../../assets/img/Bebo.jpeg";
 import Mahmoud from "../../assets/img/Mahmoud.jpeg";
 import Mashoor from "../../assets/img/Mashoor.jpeg";
@@ -12,7 +13,7 @@ export default function Team() {
   const [hideMouseDetect, setMouseDetect] = React.useState(false);
     const dataMapping = [
       {
-        name: "Mohamed Mashoor",
+        name: "Mohamed Mashhor",
         pics:  Mashoor ,
         description:
           "A senior Computer Science student at Cairo University who's always been a tech enthusiast and a self-driven, passionate learner.",
@@ -43,7 +44,7 @@ export default function Team() {
         <div className="border-b-8 border-black w-[40vw] mb-4"></div>
       </div>
       <div className="flex items-center justify-start 2xl:justify-center">
-        <div className="overflow-y-hidden flex flex-row overflow-x-auto items-center w-full py-10 scrollbar-thin scrollbar-thumb-sec">
+        <div className="overflow-y-hidden flex flex-row overflow-x-auto items-center w-full py-10 scrollbar-thin scrollbar-thumb-prim">
           {dataMapping.map((item, index) => {
             return (
               <TeamCard
@@ -55,7 +56,7 @@ export default function Team() {
             );
           })}
 
-          <div className="absolute bottom-[20%] h-44 w-72 rounded-3xl bg-prim z-[-100] duration-100 animate-[animateBox_10s_ease-in-out_infinite_alternate]"></div>
+          <div className="absolute bottom-[20%] h-44 w-[20vw] rounded-3xl bg-prim z-[-100] animate-[animateBox_10s_ease-in-out_infinite_alternate] duration-100"></div>
           <div
             className={`absolute flex justify-center items-center w-full h-[100%] sm:hidden ${
               hideMouseDetect && "hidden"
